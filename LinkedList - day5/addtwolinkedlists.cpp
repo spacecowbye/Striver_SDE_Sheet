@@ -38,3 +38,5 @@
 //        return dummy->next;
 //     }
 // };
+//tc => o (max(length  of l1,length of l2))
+//sc=>o(n)
