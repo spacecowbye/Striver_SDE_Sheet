@@ -38,3 +38,20 @@
 // };
 
 //optimal solution
+//we can see it is a combinatorics problem
+//to move right towards the target, there are fixed number of rights we have to make
+//to move down towards the target, there are a fixed number of downs we have to make fixed number of turns
+//answer = (m+n-2)C(m-1)
+// class Solution {
+// public:
+    
+//     int uniquePaths(int m, int n) {
+//         int x = m+n-2;
+//         int r = m-1;
+//         long long  ans = 1;
+//         for(int i=1;i<=r;i++){
+//             ans = ans *(x-r+i)/i;
+//         }
+//         return int(ans);
+//     }
+// };

@@ -12,40 +12,40 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
-public:
-    ListNode* reverse(ListNode* ptr) {
-        ListNode* pre = nullptr;
-        ListNode* nex = nullptr;
-        while (ptr != nullptr) {
-            nex = ptr->next;
-            ptr->next = pre;
-            pre = ptr;
-            ptr = nex;
-        }
-        return pre;
-    }
+// class Solution {
+// public:
+//     ListNode* reverse(ListNode* ptr) {
+//         ListNode* pre = nullptr;
+//         ListNode* nex = nullptr;
+//         while (ptr != nullptr) {
+//             nex = ptr->next;
+//             ptr->next = pre;
+//             pre = ptr;
+//             ptr = nex;
+//         }
+//         return pre;
+//     }
     
-    bool isPalindrome(ListNode* head) {
-        if (head == nullptr || head->next == nullptr) return true;
+//     bool isPalindrome(ListNode* head) {
+//         if (head == nullptr || head->next == nullptr) return true;
         
-        ListNode* slow = head;
-        ListNode* fast = head;
+//         ListNode* slow = head;
+//         ListNode* fast = head;
         
-        while (fast->next != nullptr && fast->next->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
+//         while (fast->next != nullptr && fast->next->next != nullptr) {
+//             slow = slow->next;
+//             fast = fast->next->next;
+//         }
         
-        slow->next = reverse(slow->next);
-        slow = slow->next;
-        ListNode* dummy = head;
+//         slow->next = reverse(slow->next);
+//         slow = slow->next;
+//         ListNode* dummy = head;
         
-        while (slow != nullptr) {
-            if (dummy->val != slow->val) return false;
-            dummy = dummy->next;
-            slow = slow->next;
-        }
-        return true;
-    }
-};
+//         while (slow != nullptr) {
+//             if (dummy->val != slow->val) return false;
+//             dummy = dummy->next;
+//             slow = slow->next;
+//         }
+//         return true;
+//     }
+// };
